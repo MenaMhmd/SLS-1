@@ -11,7 +11,8 @@ import 'package:sls/providers/user_provider.dart';
 import 'package:sls/screens/auth/register_screen.dart';
 import '../../contance.dart';
 import '../dashboard/dashboardscreen.dart';
-import '../home/home_Screen.dart';
+//import '../home/home_Screen.dart';
+import '../home/home_screen.dart';
 import '../widget/custom_button.dart';
 import '../widget/custom_text.dart';
 import 'bloc_auth/cubit.dart';
@@ -403,6 +404,7 @@ class _LoginScreenState extends State<LoginScreen> {
         },
         listener: (context, state) {
           if (state is LoginErrorState) {
+            /*
             scaffoldFormKeySingIn.currentState!.showSnackBar(SnackBar(
               content: Text(
                 state.error,
@@ -411,6 +413,8 @@ class _LoginScreenState extends State<LoginScreen> {
               duration: const Duration(seconds: 3),
               backgroundColor: Colors.blue,
             ));
+
+             */
           }
         },
       ),

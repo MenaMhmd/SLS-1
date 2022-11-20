@@ -85,7 +85,7 @@ class _AccountScreenState extends State<AccountScreen> {
 
 
             return Scaffold(
-              backgroundColor: HexColor("#f7b6b8"),
+              backgroundColor:Colors.white,
               body: Column(
                 crossAxisAlignment: CrossAxisAlignment.center,
                 mainAxisAlignment: MainAxisAlignment.center,
@@ -132,15 +132,16 @@ class _AccountScreenState extends State<AccountScreen> {
                     style: TextStyle(
                         fontSize: 16,
                         fontWeight: FontWeight.bold,
-                        color: Colors.white),
+                        color: Colors.deepPurple[900]),
                   ),
                   SizedBox(
                     height: 20,
                   ),
                   Container(
                     color: Colors.blue,
-                    height: 1,
-                    width: MediaQuery
+                    height: 1 ,
+                    width:
+                    MediaQuery
                         .of(context)
                         .size
                         .width / 1.2,
@@ -154,17 +155,18 @@ class _AccountScreenState extends State<AccountScreen> {
                             ListTile(
                               leading: Icon(
                                 Icons.person_outline_sharp,
-                                color: Colors.white,
+                                color: Colors.grey,
+                                size: 30,
                               ),
                               title: Text(
                                 "My Profile",
                                 style: TextStyle(
                                     fontWeight: FontWeight.bold,
-                                    color: Colors.white),
+                                    color: Colors.deepPurple[900]),
                               ),
                               trailing: Icon(
                                   Icons.arrow_forward_ios_sharp,
-                                  color: Colors.white),
+                                  color: Colors.blue[800]),
                               onTap: () {
                                 Navigator.push(
                                     context,
@@ -176,17 +178,18 @@ class _AccountScreenState extends State<AccountScreen> {
                             ListTile(
                               leading: Icon(
                                 Icons.edit,
-                                color: Colors.white,
+                                color: Colors.grey,
+                                size: 30,
                               ),
                               title: Text(
                                 "Edit Profile",
                                 style: TextStyle(
                                     fontWeight: FontWeight.bold,
-                                    color: Colors.white),
+                                    color: Colors.deepPurple[900]),
                               ),
                               trailing: Icon(
                                   Icons.arrow_forward_ios_sharp,
-                                  color: Colors.white),
+                                  color: Colors.blue[800]),
                               onTap: () {
                                 showModalBottomSheet(
                                     context: context,
@@ -228,17 +231,18 @@ class _AccountScreenState extends State<AccountScreen> {
                               },
                               leading: Icon(
                                 CupertinoIcons.map_pin_ellipse,
-                                color: Colors.white,
+                                color: Colors.grey,
+                                size: 30,
                               ),
                               title: Text(
                                 "Shipping Address",
                                 style: TextStyle(
                                     fontWeight: FontWeight.bold,
-                                    color: Colors.white),
+                                    color: Colors.deepPurple[900]),
                               ),
                               trailing: Icon(
                                   Icons.arrow_forward_ios_sharp,
-                                  color: Colors.white),
+                                  color: Colors.blue[800]),
                             ),
                             ListTile(
                               onTap: () {
@@ -250,17 +254,19 @@ class _AccountScreenState extends State<AccountScreen> {
                               },
                               leading: Icon(
                                 Icons.card_travel,
-                                color: Colors.white,
+                                color: Colors.grey,
+                                size: 30,
                               ),
                               title: Text(
                                 "My Orders",
                                 style: TextStyle(
                                     fontWeight: FontWeight.bold,
-                                    color: Colors.white),
+                                    color: Colors.deepPurple[900]),
                               ),
                               trailing: Icon(
                                   Icons.arrow_forward_ios_sharp,
-                                  color: Colors.white),
+                                  color: Colors.blue[800],),
+
                             ),
                             ListTile(
                               onTap: () {
@@ -272,17 +278,18 @@ class _AccountScreenState extends State<AccountScreen> {
                               },
                               leading: Icon(
                                 Icons.notifications_none,
-                                color: Colors.white,
+                                color: Colors.grey,
+                                size: 30,
                               ),
                               title: Text(
                                 "Notification Settings",
                                 style: TextStyle(
                                     fontWeight: FontWeight.bold,
-                                    color: Colors.white),
+                                    color: Colors.deepPurple[900]),
                               ),
                               trailing: Icon(
                                   Icons.arrow_forward_ios_sharp,
-                                  color: Colors.white),
+                                  color: Colors.blue[800]),
                             ),
                             ListTile(
                               onTap: () {
@@ -294,17 +301,18 @@ class _AccountScreenState extends State<AccountScreen> {
                               },
                               leading: Icon(
                                 Icons.support_agent,
-                                color: Colors.white,
+                                color: Colors.grey,
+                                size: 30,
                               ),
                               title: Text(
                                 "Customer Support",
                                 style: TextStyle(
                                     fontWeight: FontWeight.bold,
-                                    color: Colors.white),
+                                    color: Colors.deepPurple[900]),
                               ),
                               trailing: Icon(
                                   Icons.arrow_forward_ios_sharp,
-                                  color: Colors.white),
+                                  color: Colors.blue[800]),
                             ),
                             SizedBox(
                               height: 10,
@@ -445,7 +453,7 @@ class _AccountScreenState extends State<AccountScreen> {
                                   Text(
                                     "LOG OUT",
                                     style: TextStyle(
-                                        color: Colors.red),
+                                        color: Colors.black45),
                                   )
                                 ],
                               ),

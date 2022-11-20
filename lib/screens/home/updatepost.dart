@@ -10,7 +10,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_hex_color/flutter_hex_color.dart';
 import 'package:image_picker/image_picker.dart';
-import 'package:sls/screens/home/home_Screen.dart';
+
 import 'package:sls/screens/videosource/source_page.dart';
 import 'package:sls/screens/widget/video_widget.dart';
 import 'package:video_player/video_player.dart';
@@ -19,6 +19,8 @@ import '../../model/media_source.dart';
 import '../go_live_screen.dart';
 import '../widget/custom_button.dart';
 import 'package:path_provider/path_provider.dart';
+
+import 'home_screen.dart';
 
 class UpdatePost extends StatefulWidget {
   const UpdatePost({Key? key});

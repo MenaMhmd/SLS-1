@@ -31,7 +31,7 @@ List<String>notificationname=[];
     final user = Provider.of<UserProvider>(context, listen: false);
 
     return Scaffold(
-      backgroundColor: HexColor("#f7b6b8"),
+      backgroundColor: Colors.white,
       body: StreamBuilder(
           stream: _notificationStream,
           builder: (BuildContext context, AsyncSnapshot<dynamic> snapshot) {
@@ -102,7 +102,7 @@ List<String>notificationname=[];
                                       (route) => false);
                             },
                             child: const Icon(Icons.home_outlined,
-                                color: Colors.white, size: 35)),
+                                color: Colors.grey, size: 32)),
                         const SizedBox(
                           width: 20,
                         ),
@@ -112,8 +112,8 @@ List<String>notificationname=[];
                                     builder: (_) => MySearchPage())),
                             icon: const Icon(
                               Icons.search,
-                              color: Colors.white,
-                              size: 35,
+                              color: Colors.grey,
+                              size: 32,
                             )),
                         const Spacer(),
                         InkWell(
@@ -126,8 +126,8 @@ List<String>notificationname=[];
                             },
                             child: const Icon(
                               Icons.chat_outlined,
-                              color: Colors.white,
-                              size: 35,
+                              color: Colors.grey,
+                              size: 32,
                             )),
                         const SizedBox(
                           width: 20,
@@ -156,8 +156,8 @@ List<String>notificationname=[];
                                         width: 20,
                                       );
                                     },
-                                    height: 40,
-                                    width: 40,
+                                    height: 45,
+                                    width: 45,
                                     fit: BoxFit.fill,
                                   ),
                                 ),
@@ -186,7 +186,7 @@ List<String>notificationname=[];
                           style: TextStyle(
                               color: Colors.blue[900],
                               fontWeight: FontWeight.bold,
-                              fontSize: 18),
+                              fontSize: 25),
                         ),
                       ],
                     ),
@@ -197,10 +197,10 @@ List<String>notificationname=[];
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [
                         Text(
-                          "you have ${snapshot.data!.docs.length}  messages",
-                          style: TextStyle(color: Colors.white, fontSize: 12),
+                          "you have ${snapshot.data.docs.length}  messages",
+                          style: TextStyle(color: Colors.black45, fontSize: 13),
                         ),
-
+                        SizedBox(width: 10,),
                         InkWell(onTap:(){
                           setState(() {
                           notificationdata.clear();
@@ -224,12 +224,15 @@ List<String>notificationname=[];
                           padding: const EdgeInsets.all(8.0),
                           child: Row(
                             children: [
-                            CircleAvatar(child:Image.network( notificationphoto[index]),radius:35,backgroundColor: Colors.grey[300],),
+                            CircleAvatar(child:Image.network( notificationphoto[index]),radius:30,backgroundColor: Colors.grey[300],),
                             SizedBox(width: 10,),
-                            Column(children: [
+                            Column(
+                              mainAxisAlignment: MainAxisAlignment.start,
+                              crossAxisAlignment: CrossAxisAlignment.start,
+                              children: [
                               CustomText(text:notificationname[index],fontWeight: FontWeight.bold,font: 20,),
                               SizedBox(height: 5,),
-                              CustomText(text:notificationdata[index] ,font: 18,color: Colors.white70,),
+                              CustomText(text:notificationdata[index] ,font: 16,color: Colors.black45,),
                             ],)
                           ],
                           ),

@@ -11,7 +11,6 @@ import 'package:flutter/material.dart';
 import 'package:flutter_hex_color/flutter_hex_color.dart';
 import 'package:image_picker/image_picker.dart';
 import 'package:provider/provider.dart';
-import 'package:sls/screens/home/home_Screen.dart';
 import 'package:sls/screens/videosource/source_page.dart';
 import 'package:sls/screens/widget/video_widget.dart';
 import 'package:uuid/uuid.dart';
@@ -26,6 +25,7 @@ import '../widget/custom_button.dart';
 import 'package:path_provider/path_provider.dart';
 import '../notification/notification_screen.dart';
 import '../service/localnotificationscreen.dart';
+import 'home_screen.dart';
 
 class AddPost extends StatefulWidget {
 

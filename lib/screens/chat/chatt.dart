@@ -6,7 +6,7 @@ import 'package:modal_progress_hud_nsn/modal_progress_hud_nsn.dart';
 
 import '../../model/user_model.dart';
 import '../account/account_screen.dart';
-import '../home/home_Screen.dart';
+import '../home/home_screen.dart';
 import '../messages/messages_screen.dart';
 import '../notification/notification_screen.dart';
 

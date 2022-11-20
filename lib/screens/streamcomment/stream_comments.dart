@@ -64,10 +64,10 @@ class _StreamCommentScreenState extends State<StreamCommentScreen> {
   Widget build(BuildContext context) {
     final user = Provider.of<UserProvider>(context, listen: false);
     return Scaffold(
-      backgroundColor: postColor,
+      backgroundColor: Colors.white,
       bottomNavigationBar: Container(
           padding: MediaQuery.of(context).viewInsets,
-          color: postColor,
+          color: Colors.white,
           child: Row(
             children: [
               Expanded(
@@ -91,13 +91,13 @@ class _StreamCommentScreenState extends State<StreamCommentScreen> {
                   decoration: InputDecoration(
                     border: InputBorder.none,
                     labelText: "Write comment",
-                    labelStyle: TextStyle(color: Colors.white),
+                    labelStyle: TextStyle(color: Colors.grey),
                     enabledBorder: OutlineInputBorder(
                         borderRadius: BorderRadius.circular(15),
-                        borderSide: BorderSide(color: Colors.white)),
+                        borderSide: BorderSide(color: Colors.grey)),
                     focusedBorder: OutlineInputBorder(
                         borderRadius: BorderRadius.circular(15),
-                        borderSide: BorderSide(color: Colors.blue[500]!)),
+                        borderSide: BorderSide(color: Colors.grey)),
                   ),
                 ),
               ),
@@ -133,6 +133,7 @@ class _StreamCommentScreenState extends State<StreamCommentScreen> {
               .orderBy("time")
               .snapshots(),
           builder: (context, AsyncSnapshot<QuerySnapshot> snapshot) {
+
             if (!snapshot.hasData) {
               return Stack(children: [
                 Column(
@@ -146,7 +147,7 @@ class _StreamCommentScreenState extends State<StreamCommentScreen> {
                             children: [
                               Text(
                                 "${CacheHelper.getInt(key: "lenofcomment")} Comments",
-                                style: TextStyle(color: Colors.white),
+                                style: TextStyle(color: Colors.grey),
                               ),
                             ],
                           ),
@@ -187,7 +188,7 @@ class _StreamCommentScreenState extends State<StreamCommentScreen> {
                     Center(
                         child: Text("No Comments",
                             style: TextStyle(
-                                color: Colors.white,
+                                color: Colors.black45,
                                 fontSize: 20,
                                 fontWeight: FontWeight.bold))),
                   ],
@@ -260,7 +261,7 @@ class _StreamCommentScreenState extends State<StreamCommentScreen> {
                           height: 10,
                         );
                       },
-                      itemCount: snapshot.data!.docs.length,
+                      itemCount: snapshot.data == null?0:snapshot.data!.docs.length,
                       itemBuilder: (BuildContext context, int index) {
                         final itemsort = isdesending
                             ? snapshot.data!.docs.reversed.toList()

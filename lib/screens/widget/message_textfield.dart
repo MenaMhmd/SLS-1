@@ -1,5 +1,5 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
-import 'package:emoji_picker/emoji_picker.dart';
+//import 'package:emoji_picker/emoji_picker.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:provider/provider.dart';
@@ -158,7 +158,7 @@ FocusNode focusNode=FocusNode();
                )
              ],
            ),
-           isEmojiVisible? emojselected():Container(),
+          // isEmojiVisible? emojselected():Container(),
          ],
        ),
       
@@ -185,8 +185,11 @@ FocusNode focusNode=FocusNode();
 
   }
 
+  /*
   Widget emojselected()
   {
     return EmojiPicker(rows:4,columns: 7,onEmojiSelected: (emoj,category){},);
   }
+
+   */
 }

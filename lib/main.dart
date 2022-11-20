@@ -8,7 +8,6 @@ import 'package:sls/model/user_model.dart';
 import 'package:sls/providers/adminmode.dart';
 import 'package:sls/providers/user_provider.dart';
 import 'package:sls/screens/auth/first_screen.dart';
-import 'package:sls/screens/home/home_Screen.dart';
 import 'package:sls/shared/netWork/local/cache_helper.dart';
 
 void main() async{

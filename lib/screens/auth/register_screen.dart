@@ -8,7 +8,8 @@ import 'package:sls/api/api_notificationscreen.dart';
 import 'package:sls/screens/auth/first_screen.dart';
 import '../../contance.dart';
 import '../../model/user_model.dart';
-import '../home/home_Screen.dart';
+//import '../home/home_Screen.dart';
+import '../home/home_screen.dart';
 import '../messages/messages_screen.dart';
 import '../waitingscreen/waitings_screen_user.dart';
 import '../widget/custom_button.dart';
@@ -343,6 +344,7 @@ class _RegisterScreenState extends State<RegisterScreen> {
                                       //         "please ${usernameController.text} waits to accept your request!",
                                       //     payload: emailController.text);
                                     } else {
+                                      /*
                                       keyScaffold.currentState!
                                           .showSnackBar(const SnackBar(
                                         content: Text(
@@ -352,8 +354,11 @@ class _RegisterScreenState extends State<RegisterScreen> {
                                         duration: Duration(seconds: 3),
                                         backgroundColor: Colors.blue,
                                       ));
+
+                                       */
                                     }
                                   } else {
+                                    /*
                                     keyScaffold.currentState!
                                         .showSnackBar(const SnackBar(
                                       content: Text(
@@ -363,6 +368,8 @@ class _RegisterScreenState extends State<RegisterScreen> {
                                       duration: Duration(seconds: 3),
                                       backgroundColor: Colors.blue,
                                     ));
+
+                                     */
                                   }
                                 }
                               },
@@ -391,6 +398,7 @@ class _RegisterScreenState extends State<RegisterScreen> {
                 MaterialPageRoute(builder: (context) => HomeScreen()),
                 (route) => false);
           } else if (state is RegisterErrorState) {
+            /*
             keyScaffold.currentState!.showSnackBar(SnackBar(
               content: Text(
                 state.error,
@@ -399,6 +407,8 @@ class _RegisterScreenState extends State<RegisterScreen> {
               duration: const Duration(seconds: 3),
               backgroundColor: Colors.blue,
             ));
+
+             */
           }
         },
       ),
