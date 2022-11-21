@@ -131,9 +131,10 @@ Future<List<String>>videos()async
           //  String channelId = snapshot.data!.docs[index]["channelId"];
            // Timestamp timestamp = snapshot.data?.docs[index]["time"];
             Timestamp timestamp = snapshot.data!.docs[index]["context"]["duration"];
-                 return Card(
+                 return Material(
               elevation: 2,
-              shape:RoundedRectangleBorder(borderRadius: BorderRadius.circular(10)),
+              borderRadius: BorderRadius.circular(10),
+              color: HexColor("#f7b6b8"),
               child: Padding(
                 padding: const EdgeInsets.all(8.0),
                 child: Column(
@@ -171,7 +172,7 @@ Future<List<String>>videos()async
                                     Text(
                                       snapshot.data!.docs[index]["userName"],
                                       style: TextStyle(
-                                          color: Colors.black,
+                                          color: Colors.white,
                                           fontWeight: FontWeight.bold,
                                           fontSize: 14),
                                     ),
@@ -181,7 +182,7 @@ Future<List<String>>videos()async
                                     Text(
                                       "${timeago.format(timestamp.toDate())} ",
                                       style: TextStyle(
-                                          color: Colors.black54,
+                                          color: Colors.grey[800],
                                           fontSize: 12),
                                     ),
                                   ],
@@ -194,7 +195,7 @@ Future<List<String>>videos()async
                               vertical: 6, horizontal: 30),
                           decoration: BoxDecoration(
                             border: Border.all(
-                                color: Colors.black45, width: 1.5),
+                                color: Colors.blue[900]!, width: 1.5),
                             borderRadius: BorderRadius.circular(20),
                           ),
                           child: InkWell(
@@ -219,7 +220,7 @@ Future<List<String>>videos()async
                             child: Text(
                               "Follow",
                               style: TextStyle(
-                                  color: Colors.black45,
+                                  color: Colors.blue[900],
                                   fontSize: 14,
                                   fontWeight: FontWeight.w500),
                             ),
@@ -249,7 +250,7 @@ Future<List<String>>videos()async
                         Container(
                           width: MediaQuery.of(context).size.width / 3,
                           height: 1,
-                          color: Colors.grey,
+                          color: Colors.white,
                         ),
                         const SizedBox(
                           width: 6,
@@ -267,7 +268,7 @@ Future<List<String>>videos()async
                         Container(
                           width: MediaQuery.of(context).size.width / 3,
                           height: 1,
-                          color: Colors.grey,
+                          color: Colors.white,
                         ),
                       ],
                     ),
@@ -342,13 +343,10 @@ Future<List<String>>videos()async
                           SvgPicture.asset(
                             "assets/profile_icons/like.svg",
                             semanticsLabel: 'Acme Logo',
-                            color:  Colors.grey ,
+                            color:  Colors.blue ,
                             width: 25,
                             height: 25,
                           ),
-                        ),
-                        const SizedBox(
-                          width: 10,
                         ),
                         Text(
                             "${snapshot.data.docs[index]["likes"].length}"),
@@ -381,7 +379,7 @@ Future<List<String>>videos()async
                                 clipBehavior: Clip.antiAliasWithSaveLayer,
                                 builder: (context) {
                                   return Container(
-                                      color: Colors.white,
+                                      color: postColor,
                                       height:
                                           MediaQuery.of(context).size.height -
                                               30,
@@ -394,7 +392,7 @@ Future<List<String>>videos()async
                               SvgPicture.asset(
                                 "assets/comment.svg",
                                 semanticsLabel: 'Acme Logo',
-                                color: Colors.grey,
+                                color: Colors.black,
                                 width: 30,
                                 height: 30,
                               ),
@@ -403,7 +401,7 @@ Future<List<String>>videos()async
                               ),
                               Text(
                                 "3",
-                                style: TextStyle(color: Colors.grey,fontSize: 16),
+                                style: TextStyle(color: Colors.black),
                               ),
                             ],
                           ),

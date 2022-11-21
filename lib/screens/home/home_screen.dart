@@ -130,24 +130,23 @@ class _HomeScreenState extends State<HomeScreen>
     debugPrint("${userr?.name}widgettttttttttttttttttttttttttttttttttttttttttttttt");
     final userperson = Provider.of<UserProvider>(context).user;
     return Scaffold(
-      backgroundColor: Colors.white,
+        backgroundColor: HexColor("#f7b6b8").withOpacity(.5),
         appBar: AppBar(
-          toolbarHeight: 70,
           elevation: 0,
-          backgroundColor: Colors.white,
+          backgroundColor: HexColor("#f7b6b8").withOpacity(.6),
           leading: GestureDetector(
               child: const Icon(
             Icons.home_outlined,
             color: Colors.pinkAccent,
-            size: 30,
+            size: 35,
           )),
           title: IconButton(
               onPressed: () => Navigator.of(context).push(MaterialPageRoute(
                   builder: (_) => SearchScreen(userr ?? UserModel()))),
               icon: const Icon(
                 Icons.search,
-                color: Colors.grey,
-                size: 30,
+                color: Colors.white,
+                size: 35,
               )),
           actions: [
             InkWell(
@@ -180,8 +179,8 @@ class _HomeScreenState extends State<HomeScreen>
                   },
                   child: const Icon(
                     Icons.shopping_cart,
-                    color: Colors.grey,
-                    size: 30,
+                    color: Colors.white,
+                    size: 35,
                   ),
                 )
             ),
@@ -197,8 +196,8 @@ class _HomeScreenState extends State<HomeScreen>
                 },
                 child: const Icon(
                   Icons.chat_outlined,
-                  color: Colors.black,
-                  size: 30,
+                  color: Colors.white,
+                  size: 35,
                 )),
             const SizedBox(
               width: 10,
@@ -212,8 +211,8 @@ class _HomeScreenState extends State<HomeScreen>
                 },
                 child: const Icon(
                   Icons.notifications_none,
-                  color: Colors.black,
-                  size: 30,
+                  color: Colors.white,
+                  size: 35,
                 )),
             Padding(
               padding: const EdgeInsets.all(8.0),
@@ -255,7 +254,7 @@ class _HomeScreenState extends State<HomeScreen>
                       height: 10,
                       width: 10,
                       decoration: const BoxDecoration(
-                          shape: BoxShape.circle, color: Colors.green),
+                          shape: BoxShape.circle, color: Colors.grey),
                     ),
                   ],
                 ),
@@ -268,7 +267,7 @@ class _HomeScreenState extends State<HomeScreen>
           ],
         ),
         body: Scaffold(
-          backgroundColor: Color(0xFFF0FFFF),
+          backgroundColor: HexColor("#f7b6b8").withOpacity(.6),
           body: DefaultTabController(
             length: 2,
             child: Stack(
@@ -351,7 +350,7 @@ class _HomeScreenState extends State<HomeScreen>
                                       child: Row(
                                         children: [
                                           CircleAvatar(child: Image.network(snapshot.data.docs[index]["profile"]),radius: 15,backgroundColor: Colors.grey,),
-                                           CustomText(text: snapshot.data.docs[index]["userName"],color: Colors.black,),
+                                           CustomText(text: snapshot.data.docs[index]["userName"],color: Colors.white,),
                                         ],
                                       ),
 
@@ -407,12 +406,12 @@ class _HomeScreenState extends State<HomeScreen>
                                     enabledBorder: OutlineInputBorder(
                                         borderRadius: BorderRadius.circular(30),
                                         borderSide:
-                                            BorderSide(color: Colors.grey,width: 2)),
+                                            BorderSide(color: Colors.white)),
                                     contentPadding: const EdgeInsets.symmetric(
                                         vertical: 20, horizontal: 20),
                                     label: Text(
                                       "Write Something",
-                                      style: TextStyle(color: Colors.grey,fontWeight: FontWeight.bold,fontSize: 18),
+                                      style: TextStyle(color: Colors.white),
                                     ),
                                   ),
                                 ),
@@ -438,9 +437,8 @@ class _HomeScreenState extends State<HomeScreen>
                                     style: TextStyle(
                                         color: _tabController!.index == 0
                                             ? Colors.pinkAccent
-                                            : Colors.black54,
-                                        fontSize: 18,
-                                        fontWeight: FontWeight.bold),
+                                            : Colors.white,
+                                        fontSize: 18),
                                   ),
                                 ),
                                 Tab(
@@ -450,9 +448,8 @@ class _HomeScreenState extends State<HomeScreen>
                                     style: TextStyle(
                                         color: _tabController!.index == 1
                                             ? Colors.pinkAccent
-                                            : Colors.black54,
-                                        fontSize: 18,
-                                        fontWeight: FontWeight.bold),
+                                            : Colors.white,
+                                        fontSize: 18),
                                   ),
                                 ),
                               ],
@@ -485,14 +482,14 @@ class _HomeScreenState extends State<HomeScreen>
                         //       return
                                 Center(
                                 child: Padding(
-                                  padding: const EdgeInsets.all(12.0),
+                                  padding: const EdgeInsets.all(8.0),
                                   child: StreamField(),
                                 ),
                               ),
                            // }),
                         Center(
                           child: Padding(
-                            padding: const EdgeInsets.all(12.0),
+                            padding: const EdgeInsets.all(8.0),
                             child: FeedsScreen(userr??UserModel() ),
                           ),
                         ),

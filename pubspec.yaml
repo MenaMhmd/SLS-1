@@ -68,7 +68,7 @@ dependencies:
   video_player:
   device_preview:
   onesignal_flutter:
- # emoji_picker:
+  emoji_picker:
   flutter_keyboard_visibility:
   flutter_local_notifications: ^9.6.0
   timezone: ^0.8.0

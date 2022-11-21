@@ -11,8 +11,7 @@ class CustomButton extends StatelessWidget {
   final VoidCallback onPressed;
   final double elevation;
 
-  CustomButton(
-      this.onPressed,
+  CustomButton(this.onPressed,
       {this.text = "", this.textColor = Colors.black,
         this.color=Colors.white, this.font = 16,this.height=40,this.radius=10,
         this.width=double.infinity,

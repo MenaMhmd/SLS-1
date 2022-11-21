@@ -195,10 +195,10 @@ class _FeedsScreenState extends State<FeedsScreen> {
               var document =
                   FirebaseFirestore.instance.collection('Users').doc();
               document.get().then((documentt) {});
-              return Card(
+              return Material(
                 elevation: 2,
-                shape:RoundedRectangleBorder(
-                    borderRadius:BorderRadius.circular(10)),
+                color: HexColor("#f7b6b8"),
+                borderRadius: BorderRadius.circular(10),
                 child: Padding(
                     padding: const EdgeInsets.all(8.0),
                     child: Column(
@@ -248,7 +248,7 @@ class _FeedsScreenState extends State<FeedsScreen> {
                                                     ["userName"] ??
                                                 " ",
                                             style: TextStyle(
-                                                color: Colors.black,
+                                                color: Colors.white,
                                                 fontWeight: FontWeight.bold,
                                                 fontSize: 14),
                                           ),
@@ -258,7 +258,7 @@ class _FeedsScreenState extends State<FeedsScreen> {
                                           Text(
                                             "${timeago.format(timestamp.toDate())} ",
                                             style: TextStyle(
-                                                color: Colors.black54,
+                                                color: Colors.grey[900],
                                                 fontSize: 12),
                                           ),
                                         ],
@@ -271,7 +271,7 @@ class _FeedsScreenState extends State<FeedsScreen> {
                                     vertical: 6, horizontal: 30),
                                 decoration: BoxDecoration(
                                   border: Border.all(
-                                      color: Colors.grey, width: 1.5),
+                                      color: Colors.blue[900]!, width: 1.5),
                                   borderRadius: BorderRadius.circular(20),
                                 ),
                                 child: InkWell(
@@ -329,7 +329,7 @@ class _FeedsScreenState extends State<FeedsScreen> {
                                   child: Text(
                                     isfollowing ? "follow" : "Unfollow",
                                     style: TextStyle(
-                                        color: Colors.grey,
+                                        color: Colors.blue[900],
                                         fontSize: 14,
                                         fontWeight: FontWeight.w500),
                                   ),
@@ -579,12 +579,11 @@ class _FeedsScreenState extends State<FeedsScreen> {
                               SvgPicture.asset(
                                 "assets/profile_icons/like.svg",
                                 semanticsLabel: 'Acme Logo',
-                                color:  Colors.grey ,
+                                color:  Colors.blue ,
                                 width: size,
                                 height: size,
                               ),
                             ),
-                            SizedBox(width: 10,),
                             Text(
                                 "${snapshot.data?.docs[index]["likes"].length}"),
                             const SizedBox(
@@ -616,7 +615,7 @@ class _FeedsScreenState extends State<FeedsScreen> {
                                   SvgPicture.asset(
                                     "assets/comment.svg",
                                     semanticsLabel: 'Acme Logo',
-                                    color: Colors.grey,
+                                    color: Colors.black,
                                     width: 30,
                                     height: 30,
                                   ),
@@ -625,7 +624,7 @@ class _FeedsScreenState extends State<FeedsScreen> {
                                   ),
                                   Text(
                                     '2',
-                                    style: TextStyle(color: Colors.grey,fontSize: 16),
+                                    style: TextStyle(color: Colors.black),
                                   ),
                                 ],
                               ),
